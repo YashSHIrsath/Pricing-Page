@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing-Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;900&family=Bebas+Neue&family=Borel&family=Courgette&family=Exo+2:wght@300&family=Inter:wght@800&family=Josefin+Sans:wght@300&family=Luckiest+Guy&family=Merienda:wght@700&family=Merriweather:ital,wght@1,300&family=Mooli&family=Pacifico&family=Permanent+Marker&family=Playpen+Sans:wght@300&family=Poppins:wght@200&family=Rubik+Doodle+Shadow&family=Sevillana&family=Spline+Sans&family=Zeyada&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e6591b0c58.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="text">
+            Choose Your Subscription Plan
+        </div>
+        <div class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, qui.
+        </div>
+
+        <div class="heading">
+            <div class="plans-switch-container">
+                <input type="checkbox" class="plans-switch">
+                <span class="monthly">Monthly</span>
+                <span class="yearly">Yearly</span>
+            </div>
+       
+            <div class="plans-switch-containerUS">
+                <input type="checkbox" class="plans-switchUS">
+                <span class="monthly">₹</span>
+                <span class="yearly">$</span>
+            </div>
+        </div>
+        
+    </div>
+
+    <section class="pricing-container">
+        <div class="info1 ">
+            <div class="text1">BASIC</div>
+            <div class="price"><span class="basic-price"> ₹99 </span> <span class="month plan-duration">/Month</span></div>
+            <ul>
+                <li><span class="question">What's Available ?</span></li>
+                <li><span>All Contents </span><ion-icon name="close-outline"></ion-icon></li>
+                <li><span>TV/Laptop </span><ion-icon name="close-outline"></ion-icon></li>
+                <li><span>Ads Free </span><ion-icon name="close-outline"></ion-icon></li>
+                <li><span>No. of devices </span>1</li>
+                <li><span>Max video quality </span>480p</li>
+                
+            </ul>
+            <a href="" class="Buy btn1">Buy Now</a>
+        </div>
+        <div class="info1 super">
+            <div class="text1"><i class="icon1 fa-solid fa-bolt"> </i> &nbsp;SUPER</div>
+            <div class="price"><span class="professional-price"></i> ₹199 </span> <span class="month plan-duration">/Month</span></div>
+            <ul>
+                <li><span class="question">What's Available ?</span></li>
+                <li><span>All Contents </span><ion-icon name="checkmark-outline" class="icon1"></ion-icon></li>
+                <li><span>TV/Laptop </span><ion-icon name="checkmark-outline" class="icon1"></ion-icon></li>
+                <li><span>Ads Free </span><ion-icon name="close-outline" class="icon1"></ion-icon></i></li>
+                <li><span>No. of devices </span><span>2</span></li>
+                <li><span>Max video quality </span><span>1080p</span></li>
+                
+            </ul>
+            <a href="" class="Buy btn2">Buy Now</a>
+        </div>
+        <div class="info1 family">
+            <div class="text1"><i class="icon2 fa-solid fa-bolt"> </i> &nbsp;FAMILY</div>
+            <div class="price"><span class="business-price"></i> ₹399 </span> <span class="month plan-duration">/Month</span></div>
+            <ul>
+                <li><span class="question">What's Available ?</span></li>
+                <li><span>All Contents </span><ion-icon name="checkmark-outline" class="icon2"></ion-icon></li>
+                <li><span>TV/Laptop </span><ion-icon name="checkmark-outline" class="icon2"></ion-icon></li>
+                <li><span>Ads Free </span><ion-icon name="checkmark-outline" class="icon2"></ion-icon></li>
+                <li><span>No. of devices </span>4</li>
+                <li><span>Max video quality </span>4k/8k</li>
+                
+            </ul>
+            <a href="" class="Buy btn3">Buy Now</a>
+        </div>
+
+    </section>
+
+    <script>
+        const plansSwitch = document.querySelector(".plans-switch");
+        const plansSwitchUS = document.querySelector(".plans-switchUS");
+        const basicPrice = document.querySelector(".basic-price");
+        const professionalPrice = document.querySelector(".professional-price");
+        const businessPrice = document.querySelector(".business-price");
+        const planDuration = document.querySelectorAll(".plan-duration");
+
+        
+            
+
+        plansSwitch.addEventListener("change", () => {
+
+            if (plansSwitch.checked  && !plansSwitchUS.checked) {
+                    basicPrice.innerText = "₹1099";
+                    professionalPrice.innerText = "₹1599";
+                    businessPrice.innerText = "₹2899";
+                    planDuration.forEach(p => {
+                        p.innerText = "/Year";
+                    })
+            }
+        })
+        plansSwitchUS.addEventListener("change", () => {
+
+            if (plansSwitch.checked  && !plansSwitchUS.checked) {
+                    basicPrice.innerText = "₹1099";
+                    professionalPrice.innerText = "₹1599";
+                    businessPrice.innerText = "₹2899";
+                    planDuration.forEach(p => {
+                        p.innerText = "/Year";
+                    })
+            }
+        })
+        plansSwitch.addEventListener("change", () => {
+            if (plansSwitch.checked  && plansSwitchUS.checked) {
+                    basicPrice.innerText = "$14";
+                    professionalPrice.innerText = "$20";
+                    businessPrice.innerText = "$35";
+                    planDuration.forEach(p => {
+                        p.innerText = "/Year";
+                    })
+            }
+        })
+        plansSwitchUS.addEventListener("change", () => {
+            if (plansSwitch.checked  && plansSwitchUS.checked) {
+                    basicPrice.innerText = "$14";
+                    professionalPrice.innerText = "$20";
+                    businessPrice.innerText = "$35";
+                    planDuration.forEach(p => {
+                        p.innerText = "/Year";
+                    })
+            }
+        })
+        plansSwitch.addEventListener("change", () => {
+            if (!plansSwitch.checked  && !plansSwitchUS.checked) {
+                    basicPrice.innerText = "₹99";
+                    professionalPrice.innerText = "₹199";
+                    businessPrice.innerText = "₹399";
+                    planDuration.forEach(p => {
+                        p.innerText = "/Month";
+                    })
+            }
+        })
+        plansSwitchUS.addEventListener("change", () => {
+            if (!plansSwitch.checked  && !plansSwitchUS.checked) {
+                    basicPrice.innerText = "₹99";
+                    professionalPrice.innerText = "₹199";
+                    businessPrice.innerText = "₹399";
+                    planDuration.forEach(p => {
+                        p.innerText = "/Month";
+                    })
+            }
+        })
+        plansSwitch.addEventListener("change", () => {
+            if (!plansSwitch.checked  && plansSwitchUS.checked) {
+                    basicPrice.innerText = "$1.2";
+                    professionalPrice.innerText = "$2.4";
+                    businessPrice.innerText = "$5";
+                    planDuration.forEach(p => {
+                        p.innerText = "/Month";
+                    })
+            }
+        })
+        plansSwitchUS.addEventListener("change", () => {
+            if (!plansSwitch.checked  && plansSwitchUS.checked) {
+                    basicPrice.innerText = "$1.2";
+                    professionalPrice.innerText = "$2.4";
+                    businessPrice.innerText = "$5";
+                    planDuration.forEach(p => {
+                        p.innerText = "/Month";
+                    })
+            }
+        })
+        
+    
+
+    </script>
+    
+</body>
+</html>

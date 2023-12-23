@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+html{
+    display: flex;
+    justify-content: center;
+}
+body{
+    font-family: 'Josefin Sans',sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    background: #121316;
+}
+ul{
+    list-style: none;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 4%;
+    text-align: center;
+    width: 90%;
+}
+.text{
+    font-family: "Spline Sans",sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: bisque;
+}
+
+.description{
+    margin-top: 10px;
+    letter-spacing: 1.3px;
+    color: white;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.plans-switch {
+    
+    margin-left: 20px;
+    width: 250px;
+    background: #1b1b1b;
+    height: 55px;
+    appearance: none;
+    border-radius: 24px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.plans-switch-container {
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    
+}
+
+.plans-switch-container .monthly {
+    position: absolute;
+    left: 56px;
+    top: 20px;
+    pointer-events: none;
+}
+
+.plans-switch-container .yearly {
+    position: absolute;
+    right: 39px;
+    top: 20px;
+    pointer-events: none;
+}
+
+.plans-switch::before {
+    content: "";
+    position: absolute;
+    height: 44px;
+    width: 120px;
+    border-radius: 24px;
+    background: #4353ff;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    transition: all 0.5s;
+}
+
+.plans-switch:checked::before {
+    left: 138px;
+    width: 106px;
+}
+
+.plans-switchUS {
+    
+    margin-left: 20px;
+    width: 250px;
+    background: #1b1b1b;
+    height: 55px;
+    appearance: none;
+    border-radius: 24px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+.plans-switch-containerUS {
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    
+}
+
+.plans-switch-containerUS .monthly {
+    position: absolute;
+    left: 78px;
+    top: 20px;
+    pointer-events: none;
+}
+
+
+.plans-switch-containerUS .yearly {
+    position: absolute;
+    right: 55px;
+    top: 20px;
+    pointer-events: none;
+}
+
+
+
+.plans-switchUS::before {
+    content: "";
+    position: absolute;
+    height: 44px;
+    width: 120px;
+    border-radius: 24px;
+    background: #4353ff;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    transition: all 0.5s;
+}
+
+.plans-switchUS:checked::before {
+    left: 138px;
+    width: 106px;
+}
+.pricing-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.info1{
+    margin: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    font-size: 22px;
+    padding: 25px 35px;
+    border-top: 5px solid white;
+    border-radius: 10px;
+    background-color: hsla(0,0%,100%,.03);
+    color: #fff;
+    transition: 0.5s;
+  
+}
+ion-icon .icon-inner svg{
+    padding: 0;
+    margin: 0;
+}
+
+.super{
+    border-top: 5px solid #00a376;
+}
+.family{
+    border-top: 5px solid #915eff;
+}
+
+.question{
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: hsla(0,0%,100%,.6);
+}
+
+.month{
+    color: hsla(0,0%,100%,.4);
+}
+.text1{
+    font-size: 29px;
+    margin:10px 0px;
+    font-weight: 900;
+    
+}
+.price{
+    letter-spacing: 2.2px;
+    font-weight: 500;
+    margin: 20px 0px;
+}
+
+.Buy{
+    margin: 10px 0px;
+    border-radius: 10px;
+    padding: 20px 95px;
+    background-color: hsla(0,0%,100%,.03);
+    color: white;
+    transition: transform 0.5s;
+}
+.icon1{
+    color: #00a376;
+}
+.icon2{
+    color: #915eff;
+}
+
+.btn2{
+    background-color: #00a376;
+}
+
+
+.btn3{
+    background-color: #915eff;
+}
+
+ul{
+    margin-bottom: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.507);
+}
+li{
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+
+.info1:hover {
+    
+    transform: translateY(-10px) scale(1.03);
+}
+.Buy:hover{
+    transform: scale(1.04);
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 800px){
+    .info1{
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+        align-items: center;
+        font-size: 17px;
+        padding: 5px 10px;
+        border-top: 5px solid white;
+        border-radius: 10px;
+        background-color: hsla(0,0%,100%,.03);
+        color: #fff;
+        transition: 0.5s;
+      
+    }
+    .text1{
+        padding-top: 15px;
+    }
+    
+
+    
+
+    .super{
+        border-top: 5px solid #00a376;
+    }
+    .family{
+        border-top: 5px solid #915eff;
+    }
+}
+@media only screen and (max-width: 900px) and (min-width: 800px){
+    .text1{
+        padding-top: 10px;
+    }
+    .info1{
+        margin: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+        align-items: center;
+        font-size: 14px;
+        padding: 2px 6px;
+        border-top: 5px solid white;
+        border-radius: 10px;
+        background-color: hsla(0,0%,100%,.03);
+        color: #fff;
+        transition: 0.2s;
+        
+      
+    }
+    .info1 ul li{
+        max-width: 250px;
+        font-size: 18px;
+    }
+
+    .price{
+        margin-top: 10px;
+        font-size: 25px;
+    }
+
+    .text1{
+        font-size: 20px;
+        margin:10px 0px;
+        font-weight: 900;
+        
+    }
+
+    .super{
+        border-top: 5px solid #00a376;
+    }
+    .family{
+        border-top: 5px solid #915eff;
+    }
+
+    .info1:hover {
+    
+        transform: translateY(-4px) scale(1.01);
+    }
+}
+
+@media only screen and (max-width:800px){
+    .pricing-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        border-top: 10px solid white;
+        border-radius: 9px;
+        margin: 20px;
+       
+    }
+
+    .super{
+        border-top:10px solid #00a376;
+    }
+    .family{
+        border-top:10px solid #915eff;
+    }
+    .heading{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    }
