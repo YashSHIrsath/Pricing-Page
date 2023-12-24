@@ -9,6 +9,7 @@ a{
 html{
     display: flex;
     justify-content: center;
+    cursor: none;
 }
 body{
     font-family: 'Josefin Sans',sans-serif;
@@ -19,6 +20,30 @@ body{
     width: 100%;
     max-width: 1100px;
     background: #121316;
+    
+}
+.cursor-dot{
+    width: 5px;
+    height: 5px;
+    background-color: white;
+}
+
+.cursor-outline{
+    width: 30px;
+    height: 30px;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+
+.cursor-dot,
+.cursor-outline{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+
 }
 ul{
     list-style: none;
@@ -34,10 +59,10 @@ ul{
     width: 90%;
 }
 .text{
-    font-family: "Spline Sans",sans-serif;
+    font-family:'pacifico',cursive;
     font-size: 20px;
     letter-spacing: 2px;
-    font-weight: 600;
+    font-weight: 100;
     color: bisque;
 }
 
@@ -63,7 +88,7 @@ ul{
     appearance: none;
     border-radius: 24px;
     outline: none;
-    cursor: pointer;
+    cursor: none;
     position: relative;
 }
 
@@ -115,7 +140,8 @@ ul{
     appearance: none;
     border-radius: 24px;
     outline: none;
-    cursor: pointer;
+    cursor: none;
+    
     position: relative;
 }
 .plans-switch-containerUS {
@@ -221,6 +247,7 @@ ion-icon .icon-inner svg{
     background-color: hsla(0,0%,100%,.03);
     color: white;
     transition: transform 0.5s;
+    cursor: none;
 }
 .icon1{
     color: #00a376;
@@ -255,7 +282,7 @@ li{
     transform: translateY(-10px) scale(1.03);
 }
 .Buy:hover{
-    transform: scale(1.04);
+    transform: scale(1.04);    
 }
 
 @media only screen and (max-width: 1101px) and (min-width: 800px){
