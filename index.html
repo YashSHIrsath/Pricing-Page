@@ -85,7 +85,7 @@
 
     </section>
 
-    <script>
+    <script >
         const plansSwitch = document.querySelector(".plans-switch");
         const plansSwitchUS = document.querySelector(".plans-switchUS");
         const basicPrice = document.querySelector(".basic-price");
@@ -185,7 +185,8 @@
         window.addEventListener("mousemove",function(e){
             const posX = e.clientX;
             const posY = e.clientY;
-
+            cursorDot.style.display = "block";
+            cursorOutline.style.display = "block";
             cursorDot.style.left = `${posX}px`;
             cursorDot.style.top = `${posY}px`;
             cursorOutline.style.left = `${posX}px`;
@@ -197,6 +198,10 @@
             },{duration : 400,fill : "forwards"})
         })
 
+        window.addEventListener("mouseout", () => {
+            cursorDot.style.display = "none";
+            cursorOutline.style.display = "none";
+        })
     </script>
     
 </body>
