@@ -238,6 +238,7 @@ ion-icon .icon-inner svg{
     letter-spacing: 2.2px;
     font-weight: 500;
     margin: 20px 0px;
+    font-size: 30px;
 }
 
 .Buy{
@@ -286,6 +287,23 @@ li{
 }
 
 @media only screen and (max-width: 1101px) and (min-width: 800px){
+    html{
+        cursor: default;
+    }
+.cursor-dot , .cursor-outline{
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    .price{
+        font-size: 30px;
+    }
+
+    .plans-switch,.plans-switchUS,.Buy{
+        cursor: pointer;
+    }
     .info1{
         margin: 5px;
         display: flex;
@@ -316,6 +334,19 @@ li{
     }
 }
 @media only screen and (max-width: 900px) and (min-width: 800px){
+    html{
+        cursor: default;
+    }
+.cursor-dot , .cursor-outline{
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    .plans-switch,.plans-switchUS,.Buy{
+        cursor: pointer;
+    }
     .text1{
         padding-top: 10px;
     }
@@ -342,7 +373,7 @@ li{
 
     .price{
         margin-top: 10px;
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .text1{
@@ -366,10 +397,50 @@ li{
 }
 
 @media only screen and (max-width:800px){
+    html{
+        cursor: default;
+    }
+    .price{
+        font-size: 30px;
+    }
     .pricing-container{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .cursor-dot , .cursor-outline{
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    .plans-switch,.plans-switchUS,.Buy{
+
+        cursor: pointer;
+    }
+    .plans-switch,.plans-switchUS{
+        margin-top: 20px;
+    }
+    .plans-switch-containerUS .monthly { 
+        left: 78px;
+        top: 40px;  
+    }
+    
+    
+    .plans-switch-containerUS .yearly { 
+        right: 55px;
+        top: 40px;
+    }
+    .plans-switch-container .monthly { 
+        left: 57px;
+        top: 40px;  
+    }
+    
+    
+    .plans-switch-container .yearly { 
+        right: 38px;
+        top: 40px;
     }
     .info1{
         display: flex;
